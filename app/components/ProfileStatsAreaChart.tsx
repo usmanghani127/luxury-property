@@ -20,7 +20,7 @@ export const ProfileStatsAreaChart = observer(function ProfileStatsAreaChart(pro
 
   return (
     <View style={$styles}>
-      <Text style={$text}>Hello</Text>
+      <Text style={$text}>Area Chart Here</Text>
     </View>
   )
 })

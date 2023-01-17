@@ -1,8 +1,9 @@
 import * as React from "react"
-import { Image, ImageStyle, StyleProp, TextStyle, View, ViewStyle } from "react-native"
+import { Dimensions, Image, ImageStyle, StyleProp, TextStyle, View, ViewStyle } from "react-native"
 import { observer } from "mobx-react-lite"
 import { colors, typography } from "../theme"
 import { Text } from "./Text"
+import { useStores } from "../models"
 
 export interface ProfileHeaderProps {
   /**
@@ -37,40 +38,46 @@ export const ProfileHeader = observer(function ProfileHeader(props: ProfileHeade
 const $container: ViewStyle = {
   flex: 1,
   alignItems: "center",
-  margin: 30,
+  padding: 15,
+  backgroundColor: colors.backgroundSecondary,
 }
 
 const $name: TextStyle = {
-  fontFamily: typography.primary.normal,
-  fontSize: 14,
-  color: colors.palette.primary500,
+  fontFamily: typography.primary.bold,
+  fontSize: 25,
+  color: colors.white,
+  marginTop: 5,
 }
 
 const $role: TextStyle = {
   fontFamily: typography.primary.normal,
   fontSize: 14,
-  color: colors.palette.primary500,
+  color: colors.dim,
+  marginTop: 5,
 }
 
 const $location: TextStyle = {
   fontFamily: typography.primary.normal,
-  fontSize: 14,
+  fontSize: 20,
   color: colors.palette.primary500,
+  marginTop: 5,
 }
 
 const $avatar: ImageStyle = {
-  width: 150,
-  height: 150,
-  borderRadius: 75,
+  width: Dimensions.get('window').width * 0.4,
+  height: Dimensions.get('window').width * 0.4,
+  borderRadius: Dimensions.get('window').width * 0.2,
 }
 
 const $imageContainer: ViewStyle = {
-  width: 170,
-  height: 170,
-  borderRadius: 85,
+  width: Dimensions.get('window').width * 0.45,
+  height: Dimensions.get('window').width * 0.45,
+  borderRadius: Dimensions.get('window').width * 0.225,
   borderWidth: 2,
-  borderColor: 'cyan',
+  borderColor: colors.primary,
   alignItems: 'center',
   justifyContent: 'center',
-  backgroundColor: 'grey',
+  backgroundColor: colors.background,
+  marginVertical: 5,
+
 }

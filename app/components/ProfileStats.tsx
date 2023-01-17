@@ -1,14 +1,22 @@
 import * as React from "react"
-import { StyleProp, TextStyle, View, ViewStyle } from "react-native"
+import { Dimensions, StyleProp, TextStyle, View, ViewStyle } from "react-native"
 import { observer } from "mobx-react-lite"
 import { colors, typography } from "../theme"
 import { Text } from "./Text"
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 
 export interface ProfileStatsProps {
   /**
    * An optional style override useful for padding & margin.
    */
   style?: StyleProp<ViewStyle>
+}
+
+export interface IStats {
+  icon: string
+  badge: number
+  value: number
+  label: string
 }
 
 /**
@@ -18,19 +26,81 @@ export const ProfileStats = observer(function ProfileStats(props: ProfileStatsPr
   const { style } = props
   const $styles = [$container, style]
 
+  const StatsList: IStats[] = [
+    {
+      icon: 'user-following',
+      badge: 4,
+      value: 863,
+      label: 'FOLLOWERS',
+    },
+    {
+      icon: 'picture',
+      badge: 0,
+      value: 2471,
+      label: 'PHOTOS',
+    },
+    {
+      icon: 'heart',
+      badge: 7,
+      value: 1593,
+      label: "LIKES",
+    },
+  ]
+
+  const StatsItem = ({ item }) => {
+    const {icon, badge, value, label} = item;
+    return (
+      <View style={$statsItem}>
+        <View style={$statsIcon}>
+          <SimpleLineIcons name={icon} size={30} color={colors.white} />
+        </View>
+        <Text style={$statsValue}>{value}</Text>
+        <Text style={$statsLabel}>{label}</Text>
+      </View>
+    )
+  }
+
   return (
     <View style={$styles}>
-      <Text style={$text}>Hello</Text>
+      {StatsList.map((item, index) => <StatsItem key={index.toString()} item={item} />)}
     </View>
   )
 })
 
 const $container: ViewStyle = {
   justifyContent: "center",
+  flex: 1,
+  flexDirection: 'row',
+  marginVertical: 10,
 }
 
-const $text: TextStyle = {
+const $statsItem: ViewStyle = {
+  justifyContent: "center",
+  alignItems: 'center',
+  flex: 1,
+}
+
+const $statsIcon: ViewStyle = {
+  width: Dimensions.get('window').width * 0.15,
+  height: Dimensions.get('window').width * 0.15,
+  borderRadius: Dimensions.get('window').width * 0.75,
+  borderWidth: 1,
+  borderColor: colors.backgroundSecondary,
+  marginBottom: 5,
+  alignItems: "center",
+  justifyContent: "center",
+}
+
+const $statsValue: TextStyle = {
+  fontFamily: typography.primary.bold,
+  fontSize: 18,
+  color: colors.white,
+}
+
+const $statsLabel: TextStyle = {
   fontFamily: typography.primary.normal,
   fontSize: 14,
-  color: colors.palette.primary500,
+  color: colors.white,
 }
+
+

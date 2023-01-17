@@ -13,7 +13,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
 import React from "react"
-import { Text, useColorScheme } from "react-native"
+import { useColorScheme } from "react-native"
 import Config from "../config"
 import {
   MessagesScreen,
@@ -21,6 +21,7 @@ import {
 } from "../screens"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 import { colors } from "../theme"
+import Icon from 'react-native-vector-icons/Ionicons';
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -58,13 +59,11 @@ const AppDrawer = observer(function AppDrawer() {
 
   const screenOptions = {
     headerShown: true,
-    drawerActiveBackgroundColor: colors.backgroundPrimary,
+    drawerActiveBackgroundColor: colors.primary,
     drawerActiveTintColor: colors.white,
-    headerRight: () => (
-      <Text>Settings Icon</Text>
-    ),
+
     headerStyle: {
-      backgroundColor: colors.backgroundPrimary,
+      backgroundColor: colors.primary,
     },
     headerTintColor: '#fff',
   }
@@ -73,8 +72,33 @@ const AppDrawer = observer(function AppDrawer() {
     <Drawer.Navigator
       screenOptions={screenOptions}
     >
-          <Drawer.Screen name="Profile" component={UserProfileScreen} />
-          <Drawer.Screen name="Messages" component={MessagesScreen} />
+          <Drawer.Screen
+            options={{
+              headerRight: () => (
+                <Icon
+                  name={'settings-outline'}
+                  size={25}
+                  color={colors.white}
+                  style={{marginHorizontal: 10}}
+                />
+              ),
+            }}
+            name="Profile"
+            component={UserProfileScreen} />
+          <Drawer.Screen
+            name="Messages"
+            component={MessagesScreen}
+            options={{
+              headerRight: () => (
+                <Icon
+                  name={'search'}
+                  size={25}
+                  color={colors.white}
+                  style={{marginHorizontal: 10}}
+                />
+              ),
+            }}
+          />
     </Drawer.Navigator>
   )
 })
