@@ -11,17 +11,17 @@ const palette = {
   neutral800: "#191015",
   neutral900: "#000000",
 
-  primary100: "#F4E0D9",
-  primary200: "#E8C1B4",
-  primary300: "#DDA28E",
-  primary400: "#D28468",
-  primary500: "#C76542",
-  primary600: "#A54F31",
+  primary100: "#6bd3bf",
+  primary200: "#6bd3bf",
+  primary300: "#6bd3bf",
+  primary400: "#6bd3bf",
+  primary500: "#6bd3bf",
+  primary600: "#6bd3bf",
 
   secondary100: "#DCDDE9",
   secondary200: "#BCC0D6",
   secondary300: "#9196B9",
-  secondary400: "#626894",
+  secondary400: "#424656",
   secondary500: "#41476E",
 
   accent100: "#FFEED4",
@@ -47,11 +47,14 @@ export const colors = {
   /**
    * A helper for making something see-thru.
    */
+  white: "#FFFFFF",
+  black: "#000000",
   transparent: "rgba(0, 0, 0, 0)",
   /**
    * The default text color in many components.
    */
   text: palette.neutral800,
+  textPrimary: palette.primary100,
   /**
    * Secondary text information.
    */
@@ -59,7 +62,8 @@ export const colors = {
   /**
    * The default color of the screen background.
    */
-  background: palette.neutral200,
+  background: palette.secondary400,
+  backgroundPrimary: palette.primary100,
   /**
    * The default border color.
    */

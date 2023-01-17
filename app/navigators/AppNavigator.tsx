@@ -9,16 +9,18 @@ import {
   DefaultTheme,
   NavigationContainer,
 } from "@react-navigation/native"
-import { createNativeStackNavigator } from "@react-navigation/native-stack"
+import { createDrawerNavigator } from "@react-navigation/drawer"
 import { StackScreenProps } from "@react-navigation/stack"
 import { observer } from "mobx-react-lite"
 import React from "react"
-import { useColorScheme } from "react-native"
+import { Text, useColorScheme } from "react-native"
 import Config from "../config"
 import {
-  WelcomeScreen,
+  MessagesScreen,
+  UserProfileScreen,
 } from "../screens"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
+import { colors } from "../theme"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -34,8 +36,8 @@ import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
  *   https://reactnavigation.org/docs/typescript/#organizing-types
  */
 export type AppStackParamList = {
-  Welcome: undefined
-  // 🔥 Your screens go here
+  Profile: undefined
+  Messages: undefined
 }
 
 /**
@@ -50,16 +52,30 @@ export type AppStackScreenProps<T extends keyof AppStackParamList> = StackScreen
 >
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
-const Stack = createNativeStackNavigator<AppStackParamList>()
+const Drawer = createDrawerNavigator<AppStackParamList>()
 
-const AppStack = observer(function AppStack() {
+const AppDrawer = observer(function AppDrawer() {
+
+  const screenOptions = {
+    headerShown: true,
+    drawerActiveBackgroundColor: colors.backgroundPrimary,
+    drawerActiveTintColor: colors.white,
+    headerRight: () => (
+      <Text>Settings Icon</Text>
+    ),
+    headerStyle: {
+      backgroundColor: colors.backgroundPrimary,
+    },
+    headerTintColor: '#fff',
+  }
+
   return (
-    <Stack.Navigator
-      screenOptions={{ headerShown: false }}
+    <Drawer.Navigator
+      screenOptions={screenOptions}
     >
-          <Stack.Screen name="Welcome" component={WelcomeScreen} />
-      {/** 🔥 Your screens go here */}
-    </Stack.Navigator>
+          <Drawer.Screen name="Profile" component={UserProfileScreen} />
+          <Drawer.Screen name="Messages" component={MessagesScreen} />
+    </Drawer.Navigator>
   )
 })
 
@@ -76,7 +92,7 @@ export const AppNavigator = observer(function AppNavigator(props: NavigationProp
       theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
       {...props}
     >
-      <AppStack />
+      <AppDrawer />
     </NavigationContainer>
   )
 })
