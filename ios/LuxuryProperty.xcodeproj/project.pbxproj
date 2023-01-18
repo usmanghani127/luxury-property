@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* LuxuryPropertyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* LuxuryPropertyTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-LuxuryProperty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-LuxuryProperty.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2215ACBC1E62C44583DB69A9 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */; };
 		400EB2C1E1807E6CBC68B7AB /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */; };
-		7699B88040F8A987B510C191 /* libPods-LuxuryProperty-LuxuryPropertyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-LuxuryProperty-LuxuryPropertyTests.a */; };
+		8E7B2880710733DDF3A6783A /* libPods-LuxuryProperty-LuxuryPropertyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7C83823FBA88E0B3AECB143 /* libPods-LuxuryProperty-LuxuryPropertyTests.a */; };
 		BE406F562862D73000A81E39 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE406F552862D73000A81E39 /* BootSplash.storyboard */; };
+		F1E1A8E96CD736930F087E7C /* libPods-LuxuryProperty.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B80BBCE0AEBEE4342A7D97A4 /* libPods-LuxuryProperty.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = LuxuryProperty/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = LuxuryProperty/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = LuxuryProperty/main.m; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-LuxuryProperty-LuxuryPropertyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LuxuryProperty-LuxuryPropertyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B4392A12AC88292D35C810B /* Pods-LuxuryProperty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxuryProperty.debug.xcconfig"; path = "Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty.debug.xcconfig"; sourceTree = "<group>"; };
+		33C5FD0ADC8A3D112E0BBA22 /* Pods-LuxuryProperty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxuryProperty.release.xcconfig"; path = "Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty.release.xcconfig"; sourceTree = "<group>"; };
 		434D6404297703CE00EDFBC9 /* Fontisto.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Fontisto.ttf; sourceTree = "<group>"; };
 		434D6405297703CE00EDFBC9 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
 		434D6406297703CE00EDFBC9 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
@@ -56,14 +55,15 @@
 		434D6411297703CE00EDFBC9 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
 		434D6412297703CE00EDFBC9 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
 		434D6413297703CE00EDFBC9 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-LuxuryProperty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxuryProperty.release.xcconfig"; path = "Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig"; path = "Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-LuxuryProperty.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LuxuryProperty.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig"; path = "Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig"; sourceTree = "<group>"; };
 		951E59D51E504BC9C5F46169 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-LuxuryProperty/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		B80BBCE0AEBEE4342A7D97A4 /* libPods-LuxuryProperty.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LuxuryProperty.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE406F552862D73000A81E39 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = LuxuryProperty/BootSplash.storyboard; sourceTree = "<group>"; };
+		C77601FB127829BF5ACEDC70 /* Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig"; path = "Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig"; sourceTree = "<group>"; };
 		D5AFED2E09CC2E86D1338C0F /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F1DE4096AA086C5B4B22835E /* Pods-LuxuryProperty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxuryProperty.debug.xcconfig"; path = "Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty.debug.xcconfig"; sourceTree = "<group>"; };
+		F4C060A5C9EB34B3DB242F43 /* Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig"; path = "Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7C83823FBA88E0B3AECB143 /* libPods-LuxuryProperty-LuxuryPropertyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LuxuryProperty-LuxuryPropertyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-LuxuryProperty-LuxuryPropertyTests.a in Frameworks */,
+				8E7B2880710733DDF3A6783A /* libPods-LuxuryProperty-LuxuryPropertyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-LuxuryProperty.a in Frameworks */,
+				F1E1A8E96CD736930F087E7C /* libPods-LuxuryProperty.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-LuxuryProperty.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-LuxuryProperty-LuxuryPropertyTests.a */,
+				B80BBCE0AEBEE4342A7D97A4 /* libPods-LuxuryProperty.a */,
+				F7C83823FBA88E0B3AECB143 /* libPods-LuxuryProperty-LuxuryPropertyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,10 +203,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-LuxuryProperty.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-LuxuryProperty.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig */,
+				F1DE4096AA086C5B4B22835E /* Pods-LuxuryProperty.debug.xcconfig */,
+				33C5FD0ADC8A3D112E0BBA22 /* Pods-LuxuryProperty.release.xcconfig */,
+				F4C060A5C9EB34B3DB242F43 /* Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig */,
+				C77601FB127829BF5ACEDC70 /* Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -226,12 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "LuxuryPropertyTests" */;
 			buildPhases = (
-				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
+				3D44956436D530076C4869F4 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
+				E35945FB41D28B0725CF0866 /* [CP] Embed Pods Frameworks */,
+				516C89D71D7729F1496DFE43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,14 +247,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "LuxuryProperty" */;
 			buildPhases = (
-				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
+				4080DB45A99470830806EAE8 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				F3EA7B733AA244B9A6008865 /* [CP] Embed Pods Frameworks */,
+				C661F8A60BA69F505247985B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -337,24 +337,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
+		3D44956436D530076C4869F4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -376,7 +359,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */ = {
+		4080DB45A99470830806EAE8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,24 +381,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
+		516C89D71D7729F1496DFE43 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
+		C661F8A60BA69F505247985B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,21 +415,38 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
+		E35945FB41D28B0725CF0866 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty-LuxuryPropertyTests/Pods-LuxuryProperty-LuxuryPropertyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3EA7B733AA244B9A6008865 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LuxuryProperty/Pods-LuxuryProperty-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -503,7 +503,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig */;
+			baseConfigurationReference = F4C060A5C9EB34B3DB242F43 /* Pods-LuxuryProperty-LuxuryPropertyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -533,7 +533,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig */;
+			baseConfigurationReference = C77601FB127829BF5ACEDC70 /* Pods-LuxuryProperty-LuxuryPropertyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -560,7 +560,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-LuxuryProperty.debug.xcconfig */;
+			baseConfigurationReference = F1DE4096AA086C5B4B22835E /* Pods-LuxuryProperty.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -587,7 +587,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-LuxuryProperty.release.xcconfig */;
+			baseConfigurationReference = 33C5FD0ADC8A3D112E0BBA22 /* Pods-LuxuryProperty.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

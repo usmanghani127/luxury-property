@@ -46,7 +46,11 @@ export const colors = {
   secondary: "",
   background: "#424656",
   backgroundSecondary: "#4B5064",
+  backgroundTertiary: "#535470",
   dim: "#978F8A",
   error: "#C03403",
   errorBackground: "#F2D6CD",
+  followers: 'rgba(110,140,220,1)',
+  photos: 'rgba(150,75,245,1)',
+  likes: "rgba(120,215,190,1)",
 }

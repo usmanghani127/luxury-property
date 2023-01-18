@@ -5,11 +5,4 @@ module.exports = {
     // packages, you can add them to the referenced path below and uncomment this line.
     // "./assets/fonts/"
   ],
-  dependencies: {
-    'react-native-vector-icons': {
-      platforms: {
-        ios: null,
-      },
-    },
-  }
 }
