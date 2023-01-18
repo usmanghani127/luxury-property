@@ -3,7 +3,7 @@ import { observer } from "mobx-react-lite"
 import { ViewStyle } from "react-native"
 import { StackScreenProps } from "@react-navigation/stack"
 import { AppStackScreenProps } from "../navigators"
-import { ProfileHeader, ProfileStats, ProfileStatsAreaChart, Screen, Text } from "../components"
+import { ProfileHeader, ProfileStats, ProfileStatsAreaChart, Screen } from "../components"
 // import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../models"
 
@@ -24,11 +24,7 @@ export const UserProfileScreen: FC<StackScreenProps<AppStackScreenProps, "UserPr
   // const navigation = useNavigation()
   return (
     <Screen style={$root} preset="scroll">
-      <ProfileHeader
-        name={'John Kensington'}
-        avatar={'https://w7.pngwing.com/pngs/247/564/png-transparent-computer-icons-user-profile-user-avatar-blue-heroes-electric-blue.png'}
-        location={'Sidney, Australia'}
-        role={'UI/UX Designer & Developer'}/>
+      <ProfileHeader />
       <ProfileStats />
       <ProfileStatsAreaChart />
     </Screen>

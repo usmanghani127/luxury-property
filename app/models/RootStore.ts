@@ -5,6 +5,7 @@ import { UserModel } from "./User"
  * A RootStore model.
  */
 export const RootStoreModel = types.model("RootStore").props({
+  User: UserModel,
 })
 
 /**

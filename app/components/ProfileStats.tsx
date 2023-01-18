@@ -4,6 +4,8 @@ import { observer } from "mobx-react-lite"
 import { colors, typography } from "../theme"
 import { Text } from "./Text"
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import { useStores } from "../models"
+import { useEffect } from "react"
 
 export interface ProfileStatsProps {
   /**
@@ -26,26 +28,11 @@ export const ProfileStats = observer(function ProfileStats(props: ProfileStatsPr
   const { style } = props
   const $styles = [$container, style]
 
-  const StatsList: IStats[] = [
-    {
-      icon: 'user-following',
-      badge: 4,
-      value: 863,
-      label: 'FOLLOWERS',
-    },
-    {
-      icon: 'picture',
-      badge: 0,
-      value: 2471,
-      label: 'PHOTOS',
-    },
-    {
-      icon: 'heart',
-      badge: 7,
-      value: 1593,
-      label: "LIKES",
-    },
-  ]
+  const Store = useStores();
+
+  useEffect(() => {
+    Store.User.GetUserStats();
+  }, [])
 
   const StatsItem = ({ item }) => {
     const {icon, badge, value, label} = item;
@@ -62,7 +49,7 @@ export const ProfileStats = observer(function ProfileStats(props: ProfileStatsPr
 
   return (
     <View style={$styles}>
-      {StatsList.map((item, index) => <StatsItem key={index.toString()} item={item} />)}
+      {Store.User.stats.map((item, index) => <StatsItem key={index.toString()} item={item} />)}
     </View>
   )
 })

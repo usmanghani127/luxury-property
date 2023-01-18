@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Dimensions, StyleProp, View, ViewStyle, Text, TextStyle } from "react-native"
 import { observer } from "mobx-react-lite"
 import { StackedAreaChart } from 'react-native-svg-charts'
 import * as shape from 'd3-shape'
 import { colors, typography } from "../theme"
+import { format } from "date-fns"
+import { useStores } from "../models"
 
 export interface ProfileStatsAreaChartProps {
   /**
@@ -18,51 +20,11 @@ export interface ProfileStatsAreaChartProps {
 export const ProfileStatsAreaChart = observer(function ProfileStatsAreaChart(props: ProfileStatsAreaChartProps) {
   const { style } = props
   const $styles = [$container, style]
+  const Store = useStores();
 
-  const data = [
-    {
-      month: new Date(2022, 6, 1),
-      followers: 683,
-      photos: 242,
-      likes: 771,
-    },
-    {
-      month: new Date(2022, 7, 1),
-      followers: 789,
-      photos: 274,
-      likes: 943,
-    },
-    {
-      month: new Date(2022, 8, 1),
-      followers: 1043,
-      photos: 309,
-      likes: 1043,
-    },
-    {
-      month: new Date(2022, 9, 1),
-      followers: 973,
-      photos: 358,
-      likes: 1263,
-    },
-    {
-      month: new Date(2022, 10, 1),
-      followers: 777,
-      photos: 489,
-      likes: 1452,
-    },
-    {
-      month: new Date(2022, 11, 1),
-      followers: 846,
-      photos: 573,
-      likes: 1693,
-    },
-    {
-      month: new Date(2022, 12, 1),
-      followers: 923,
-      photos: 699,
-      likes: 2053,
-    },
-  ]
+  useEffect(() => {
+    Store.User.GetAreaGraphData()
+  }, [])
 
   const keyColors = [colors.followers, colors.photos, colors.likes]
   const keys = ['followers', 'photos', 'likes']
@@ -72,30 +34,50 @@ export const ProfileStatsAreaChart = observer(function ProfileStatsAreaChart(pro
     { onPress: () => console.log('likes') },
   ]
 
+  const Legend = () => (
+    <View style={$legend}>
+      <Text style={$heading}>Statistics</Text>
+      <View style={$legendItem}>
+        <View style={[$legendBox, $likes]}/>
+        <Text style={$legendItemText}>Likes</Text>
+      </View>
+      <View style={$legendItem}>
+        <View style={[$legendBox, $followers]}/>
+        <Text style={$legendItemText}>Followers</Text>
+      </View>
+      <View style={$legendItem}>
+        <View style={[$legendBox, $pictures]}/>
+        <Text style={$legendItemText}>Pictures</Text>
+      </View>
+    </View>
+  )
+
+  const MonthsGrid = () => {
+    // @ts-ignore
+    const months = Store.User.areaGraphData.map(item => format(new Date(item.month), 'MMM'))
+    return (
+      <View style={$monthsRow}>
+        {months.map((month, index) => (
+          <View key={index.toString()}>
+            <Text style={$monthText}>{month}</Text>
+            <View style={$gridLine} />
+          </View>
+        ))}
+      </View>
+    )
+  }
+
   return (
     <View style={$container}>
-      <View style={$legend}>
-        <Text style={$heading}>Statistics</Text>
-        <View style={$legendItem}>
-          <View style={[$legendBox, $likes]}/>
-          <Text style={$legendItemText}>Likes</Text>
-        </View>
-        <View style={$legendItem}>
-          <View style={[$legendBox, $followers]}/>
-          <Text style={$legendItemText}>Followers</Text>
-        </View>
-        <View style={$legendItem}>
-          <View style={[$legendBox, $pictures]}/>
-          <Text style={$legendItemText}>Pictures</Text>
-        </View>
-      </View>
+      <Legend />
+      <MonthsGrid />
       <StackedAreaChart
         style={$areaChart}
-        data={data}
+        data={Store.User.areaGraphData}
         keys={keys}
         colors={keyColors}
         curve={shape.curveNatural}
-        showGrid={true}
+        showGrid={false}
         svgs={svgs}
       />
     </View>
@@ -152,4 +134,25 @@ const $legendItemText: TextStyle = {
 const $areaChart: ViewStyle = {
   height: Dimensions.get('window').height * 0.36,
   paddingVertical: 20,
+}
+
+const $monthsRow: ViewStyle = {
+  flexDirection: 'row',
+  justifyContent: "space-around",
+}
+
+const $gridLine: ViewStyle = {
+  width: 1,
+  backgroundColor: colors.white,
+  height: Dimensions.get('window').height * 0.3,
+  alignSelf: 'center',
+  marginTop: 10,
+  position: 'absolute',
+  top: 10,
+}
+
+const $monthText: TextStyle = {
+  color: colors.white,
+  fontFamily: typography.primary.normal,
+  fontSize: 14,
 }

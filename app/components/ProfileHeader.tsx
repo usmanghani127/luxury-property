@@ -4,12 +4,16 @@ import { observer } from "mobx-react-lite"
 import { colors, typography } from "../theme"
 import { Text } from "./Text"
 import { useStores } from "../models"
+import { useEffect } from "react"
 
 export interface ProfileHeaderProps {
   /**
    * An optional style override useful for padding & margin.
    */
   style?: StyleProp<ViewStyle>
+}
+
+export interface IUser {
   name: string,
   role: string,
   avatar: string,
@@ -20,8 +24,17 @@ export interface ProfileHeaderProps {
  * Describe your component here
  */
 export const ProfileHeader = observer(function ProfileHeader(props: ProfileHeaderProps) {
-  const { style, name, role, avatar, location } = props
+  const { style } = props
   const $styles = [$container, style]
+
+  const Store = useStores();
+  // @ts-ignore
+  const {profile = []} = Store.User;
+  const {name = '', role = '', avatar = 'https://www.pngmart.com/files/22/User-Avatar-Profile-PNG.png', location = ''} = profile[0] || {}
+  useEffect(() => {
+    Store.User.GetUserProfile()
+  }, [])
+
 
   return (
     <View style={$styles}>
